@@ -1,0 +1,30 @@
+@import '_main';
+
+.btn-cta {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5em 2em;
+    border: 1px solid $main-theme-color;
+    font-family: sans-serif;
+    border-radius: 35px;
+    font-size: 1rem;
+    color: $main-theme-color;
+    font-weight: bold;
+    text-align: center;   
+    background: white;
+    cursor: pointer;
+}
+
+.btn-cta:focus {
+    outline:none;
+}
+
+.btn-cta:hover {
+    transition: 250ms;
+    background: $main-theme-color;
+    color:white;
+}
+
+.btn-cta:active {
+    background: $main-theme-chromatic-color;
+}

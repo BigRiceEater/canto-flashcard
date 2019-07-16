@@ -1,0 +1,38 @@
+extends template/layout.pug
+
+block pagetitle
+  title Canto Vocabulary
+
+block links
+  link(rel="stylesheet" href="style/vocabulary.css")
+
+block navigation
+  - var currentPageName = 'vocab'
+  include navigation.pug
+
+block content 
+  div.container
+    div.infobox
+      p Total number of entries : #{words.length}
+    div.controls
+      button delete
+      button selected
+    div.table
+      table.table
+        thead
+          tr
+            each header in ['#','Word','Chinese','Category','']
+              th(scope="col") #{header}
+        tbody 
+          each w, index in words
+            tr
+              th(scope="row") #{index+1}
+              td #{w.word}
+              td #{w.chinese}
+              td #{w.category}
+              td 
+                button delete
+      //- each w, index in words
+      //-   li 
+      //-     a(href=`/edit?id=${w.id}`)= w.word
+      //-     button delete

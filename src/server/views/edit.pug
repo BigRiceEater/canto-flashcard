@@ -1,0 +1,26 @@
+doctype html
+html
+  head 
+    title Canton Vocab
+  body
+  - // all input by default is text
+    form(action="/edit" method='post' enctype="multipart/form-data")
+      p English: 
+        input(name="engword" value=word.word)
+      p Chinese:
+        input(name="zhword" value=word.chinese)
+      p Pronounce:
+        input(name="pronounce" value=word.pronounce)
+      p Category:
+        select(name="category")
+          each c,index in categories
+            - const selected = c === word.category
+            option(value=c selected=selected)= c
+      p Image Url:
+        input(name="image" value=word.image)
+      img(src=word.image style="width: 100px;")
+      p Upload Image:
+        input(type="file" name="wordimage" accept="image/*")
+      div#controls
+        input(type='submit' value="enter")
+        button(onclick="") back

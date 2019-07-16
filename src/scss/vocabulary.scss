@@ -1,0 +1,7 @@
+@import 'main';
+
+.table {
+        tr:hover {
+        background: rgba($main-theme-color, 0.1);
+    }
+}

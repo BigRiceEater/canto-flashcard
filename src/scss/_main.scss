@@ -1,0 +1,16 @@
+$main-theme-color: #f5055d;
+$main-theme-chromatic-color: #d63757;
+$main-theme-complementary-color : #05f59d;
+$main-theme-outline-color: #919191;
+
+// body {
+//     font-family: sans-serif;
+//     color: $main-theme-outline-color;
+// }
+
+$theme-colors : (
+    "primary" : $main-theme-color
+);
+
+@import "node_modules/bootstrap/scss/bootstrap";
+

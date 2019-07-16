@@ -1,0 +1,16 @@
+mixin navigationItem(pagename,url)
+  a.nav-item.nav-link(
+    class={active: currentPageName.toLowerCase() === pagename.toLowerCase()} 
+    href=url
+    ) #{pagename}
+
+nav.navbar.navbar-expand-md.bg-dark.navbar-dark
+  a.navbar-brand(href='/')
+    img(src="/img/logo.png" width="30" height="30" alt="Canto")
+    | Canto Flash
+  button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarNavAltMarkup', aria-controls='navbarNavAltMarkup', aria-expanded='false', aria-label='Toggle navigation')
+    span.navbar-toggler-icon
+  #navbarNavAltMarkup.collapse.navbar-collapse
+    .navbar-nav
+      +navigationItem('Home','home')
+      +navigationItem('Vocab','vocab')

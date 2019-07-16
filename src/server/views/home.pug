@@ -1,0 +1,26 @@
+extends template/layout.pug
+
+block pagetitle
+  title Canto Flash
+
+block scripts
+  script(src="/lib/home.min.js")
+
+block links
+  link(rel='stylesheet' href='/style/home.css')
+
+block navigation
+  - var currentPageName = 'home'
+  include navigation.pug
+
+block content
+  div.container
+  div.row.justify-content-center
+    div.main-card
+      div.main-card-header
+        h2.center#TryThisWord WORD
+      div.center.main-card-content
+        img.center.flashcard-image#WordImage
+        p.center#WordPronounce Pronounce 
+        button.center.btn-cta(onclick="nextWord()") next
+
